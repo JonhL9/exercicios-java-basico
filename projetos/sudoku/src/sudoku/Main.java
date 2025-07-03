@@ -116,7 +116,7 @@ public class Main {
             return;
         }
 
-        var args = new Object[81];
+        var args = new Object[BOARD_LIMIT * BOARD_LIMIT];
         var argPos = 0;
         for (int i = 0; i < BOARD_LIMIT; i++) {
             for (var col: board.getCells()){
@@ -173,7 +173,7 @@ public class Main {
             System.out.println("Seu jogo contém, erros, verifique seu board e ajuste-o\n");
         } else {
             System.out.println("Você ainda precisa preenhcer algum espaço\n");
-            board.getCells().stream().flatMap(Collection::stream).forEach(s -> System.out.println(s.getAtualValue()));
+            //board.getCells().stream().flatMap(Collection::stream).forEach(s -> System.out.println(s.getAtualValue()));
         }
     }
 
